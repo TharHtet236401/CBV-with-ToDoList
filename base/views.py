@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -32,6 +32,11 @@ class RegisterPage(FormView):
         if user is not None:
             login(self.request,user)
         return super(RegisterPage,self).form_valid(form)
+
+    def get(self,request,*args,**kwargs):
+        if self.request.user.is_authenticated:
+            return redirect('tasks')
+        return super(RegisterPage,self).get(request,*args,**kwargs)
 
 
 
