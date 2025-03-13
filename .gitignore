@@ -1,0 +1,43 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+
+# Django migrations
+*/migrations/
+
+# Database
+db.sqlite3
+
+# Static files
+/static/
+
+# Media files
+/media/
+
+# Environment variables
+.env
+
+# IDE files
+*.swp
+*.swo
+*.idea/
+*.vscode/
+
+# Log files
+*.log
+
+# Ignore coverage reports
+.coverage
+coverage.xml
+htmlcov/
+*.cover
+
+# Ignore test results
+test-results/
+*.xml
+*.json
+
+# Ignore other files
+*.DS_Store
+*.bak
+*.tmp
