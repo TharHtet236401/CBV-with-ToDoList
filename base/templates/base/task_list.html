@@ -14,6 +14,9 @@
 {% endif %}
 <hr>
 <h1>Task List</h1>
+{% if count > 0 %}
+<h3>You have {{ count }} incomplete task{{ count|pluralize:"s" }}</h3>
+{% endif %}
 <table> 
 
     <thead>
