@@ -2,12 +2,15 @@
 <p>
     {{ request.user }}
 </p>
-<a href="#">Logout</a>
+<form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form>
 {% else %}
 <p>
     Please login
 </p>
-<a href="{% url 'login' %}">Login</a>
+<a href="{% url 'login' %}">Login</a>   
 {% endif %}
 <hr>
 <h1>Task List</h1>
