@@ -1,0 +1,10 @@
+
+{% if task %}
+    <h1>Task Detail : {{ task.id }}</h1>
+    <h2>{{ task.title }}</h2>
+    <p>{{ task.description }}</p>
+    <p>{{ task.complete }}</p>
+{% else %}
+    <p>Task not found</p>
+{% endif %}
+
